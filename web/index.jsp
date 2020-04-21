@@ -33,14 +33,6 @@
     </div>
   </div>
 
-  <div class="responsive">
-    <div class="gallery">
-      <a target="_blank" href="./images/awp.jpg">
-        <img src="./images/awp.jpg" alt="awp" width="600" height="400">
-      </a>
-      <div class="desc">Una comune armicella</div>
-    </div>
-  </div>
 
 
   <div class="responsive">
@@ -52,12 +44,58 @@
     </div>
   </div>
 
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="./images/Ak-47.jpg">
+        <img src="./images/Ak-47.jpg" alt="ak-47" width="600" height="400">
+      </a>
+      <div class="desc">Arma Leggendaria</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="./images/M4A1.png">
+        <img src="./images/M4A1.png" alt="m4a1" width="600" height="400">
+      </a>
+      <div class="desc">Rivale dell'Ak</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="./images/galil.jpg">
+        <img src="./images/galil.jpg" alt="galil" width="600" height="400">
+      </a>
+      <div class="desc">Più economica dell'Ak</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="./images/famas.jpg">
+        <img src="./images/famas.jpg" alt="famas" width="600" height="400">
+      </a>
+      <div class="desc">Più economica dell'M4</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="./images/awp.jpg">
+        <img src="./images/awp.jpg" alt="awp" width="600" height="400">
+      </a>
+      <div class="desc">Una comune armicella</div>
+    </div>
+  </div>
+
+
   <div class="clearfix"></div>
 
   <div class="container">
     <div style="text-align:center">
       <h2>Contact Us</h2>
-      <p>Swing by for a cup of coffee, or leave us a message:</p>
+      <p>Recensisci il sito:</p>
     </div>
     <div class="row">
       <div class="column">
