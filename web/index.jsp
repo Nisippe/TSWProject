@@ -18,7 +18,7 @@
   <div class="header">
     <img class="banner" src="./images/banner.png">
     <ul>
-      <li><a href="">Login/Register</a></li>
+      <li><a href="./login-register.jsp">Login/Register</a></li>
       <li><a href="">News/Update</a></li>
       <li><a href="">Shopping</a></li>
     </ul>
@@ -102,7 +102,7 @@
         <img src="./images/map.png" height="100" width="100">
       </div>
       <div class="column">
-        <form action="/action_page.php">
+        <form action="Recensioni">
           <label for="fname">Nome</label>
           <input type="text" id="fname" name="firstname" placeholder="Nome">
           <label for="lname">Cognome</label>
