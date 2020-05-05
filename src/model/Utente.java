@@ -1,7 +1,6 @@
 package model;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 
 public class Utente {
     public Utente(String nickname, String nome, String cognome, String passwordn, String email, int giorno,int mese,int anno) {

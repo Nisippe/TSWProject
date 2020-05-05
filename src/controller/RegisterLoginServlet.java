@@ -44,7 +44,7 @@ public class RegisterLoginServlet extends HttpServlet {
             Utente u = new Utente(nickname, nome, cognome, password, email, Integer.parseInt(day), Integer.parseInt(month), Integer.parseInt(year));
             utenteDAO.doSave(u);
 
-            RequestDispatcher dispatcher = request.getRequestDispatcher("./index.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
             dispatcher.forward(request, response);
 
         }else{

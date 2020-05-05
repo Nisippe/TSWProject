@@ -14,7 +14,7 @@ public class LogoutServlet extends HttpServlet {
             throws ServletException, IOException {
         request.getSession().removeAttribute("utente");
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("login-register.jsp");
         dispatcher.forward(request, response);
     }
 }
