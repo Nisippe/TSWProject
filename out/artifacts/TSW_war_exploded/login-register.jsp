@@ -131,14 +131,14 @@
 
         .left{
             position: absolute;
-            left: 40px;
-            bottom: 50px;
+            left: 0.02%;
+            bottom: 30%;
         }
 
         .right{
             position: absolute;
-            bottom: 60px;
-            left: 1040px;
+            bottom: 38%;
+            left: 50%;
         }
 
         .right input[type="text"]{
@@ -182,11 +182,20 @@
             left: 8%;
         }
 
+        .form1{
+            position: relative;
+            width: 10%;
+            max-width: 15%;
+            left:15%;
+            top:8px;
+        }
     </style>
 </head>
 <body>
 
-
+<%
+        if(request.getSession().getAttribute("utente")==null) {
+%>
 <!-- UGUALE AD OGNI PAGINA -->
 <div class="container">
     <img src="images/background.png" style="width: 100%; height:10%"/>
@@ -195,11 +204,13 @@
     </div>
     <div class="right">
         <!-- LOGIN -->
+        <form action="Register">
         <div class="row">
-            <div class="form"><input type="text" placeholder="username" id="namebox" name="userlogin"></div>
-            <div class="form"><input type="password" id="namebox" name="passlogin"></div>
-
+            <div class="form"><input type="text" placeholder="username" id="namebox" name="userlogin"/></div>
+            <div class="form"><input type="password" id="namebox" name="passlogin"/></div>
+            <div class="form1"><input type="submit" class="button2" value="Login"/> </div>
         </div>
+        </form>
     </div>
 
     <div class="navbar">
@@ -230,10 +241,10 @@
         <input type="date" id="mailbox" name="date" /><br><br>
         <p id="intro4">By clicking Create an account, you agree to our Terms and that
             you have read our Data Policy, including our Cookie Use.</p>
-        <input type="submit" class="button2" value="Create an account" />
+        <input type="submit" class="button2"  name="register" value="Create an account" />
         <br><hr>
         <p id="intro4">Compra un'arma!</p>
-            <form>
+            </form>
     </div>
 </div>
 
@@ -241,5 +252,10 @@
     <div id="cs-body-footer-base" class="cs-body-footer">Italian (IT)<br><hr>
         &copy; Giuseppe Nisivoccia , Federico Apicella &nbsp;&nbsp; Per eventuali problemi consultare questa mail : g.nisivoccia@studenti.unisa.it</div>
 </div>
+<%
+    }else{
+%>
+        <h1>SEI GIA LOGGATO!</h1>
+<%}%>
 </body>
 </html>

@@ -13,14 +13,14 @@
 
       .left{
           position: absolute;
-          left: 40px;
-          bottom: 50px;
+          left: 0.02%;
+          bottom: 30%;
       }
 
       .right{
           position: absolute;
-          bottom: 60px;
-          left: 1640px;
+          bottom: 38%;
+          left: 85%;
       }
 
       .right input[type="text"]{
@@ -56,14 +56,12 @@
         max-width: 25%;
     }
 
-    /* Make the image to responsive */
     .image {
         display: block;
         width: 100%;
         height: auto;
     }
 
-    /* The overlay effect - lays on top of the container and over the image */
     .overlay {
         position: absolute;
         bottom: 0;
@@ -79,7 +77,6 @@
         text-align: center;
     }
 
-    /* When you mouse over the container, fade in the overlay title */
     .item:hover .overlay {
         opacity: 1;
     }
@@ -92,12 +89,24 @@
 
     .carrello{
         position: absolute;
-        bottom: 10px;
-        left: 1740px;
+        bottom: 5%;
+        left: 90%;
     }
 
       .cart{
           width: 20%;
+      }
+
+      .center{
+          position: relative;
+          left: 40%;
+      }
+
+      .nome{
+          position: relative;
+          left: 43.5%;
+          bottom: 20%;
+
       }
   </style>
   </head>
@@ -123,10 +132,24 @@
         </div>
 
         <div class="carrello">
-            <a href=""><img src="./images/cart.png" alt="carrello" class="cart"></a>
+            <a href=""><img src="./images/cart.png" alt="carrello" class="cart"/></a>
         </div>
     </div>
   <!-- FIN QUI-->
+
+  <%
+      if(request.getSession().getAttribute("utente")==null) {
+      }else{
+          
+  %>
+  <form action="/Logout">
+      <div class="nome"><a href="index.jsp"><img src="./images/Logout.png" style="max-width: 10%;max-height: 10%;"/></a></div>
+  </form>
+  <%
+      }
+  %>
+  <div class="center"><img src="./images/Novitatext.png" alt="Novità"/></div>
+
 <div class="row">
   <div class="item">
       <a href=""><img src="./images/Armi/Ak-47.jpg" alt="ak" class="image"></a>
