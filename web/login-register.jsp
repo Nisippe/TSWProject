@@ -3,7 +3,7 @@
 
     <meta charset="utf-8">
     <title>Counter-Strike</title>
-    <link href="css/LoginPage.css" rel="stylesheet">
+    <link href="css/LoginPage.css" rel="stylesheet" />
 </head>
 <body>
 <%
@@ -66,6 +66,3 @@
 %>
         <h1>SEI GIA LOGGATO!</h1>
 <%}%>
-<jsp:include page="footer.jsp">
-    <jsp:param name="foot" value="footer"/>
-</jsp:include>

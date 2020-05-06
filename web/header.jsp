@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Counter-Strike</title>
-    <link href="css/HomePage.css" rel="stylesheet">
+    <link href="css/HomePage.css" rel="stylesheet" />
 </head>
 <body>
 <div class="container">

@@ -20,7 +20,7 @@
 
 <div class="row">
   <div class="item">
-      <a href=""><img src="images/Armi/Ak-47.jpg" alt="ak" class="image"></a>
+      <a href=""><img src="images/Armi/AK-47.jpg" alt="ak" class="image"></a>
       <div class="overlay">AK-47</div>
   </div>
 
