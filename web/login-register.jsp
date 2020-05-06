@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Counter-Strike</title>
     <link href="css/LoginPage.css" rel="stylesheet" />
+    <link href="css/footerPage.css" rel="stylesheet" />
 </head>
 <body>
 <%
@@ -29,9 +30,9 @@
     <div class="navbar">
         <a href="index.jsp">Home</a>
         <a href="login-register.jsp">Login/Register</a>
-        <a href="">Edit Profile</a>
-        <a href="./Shopping.jsp">Shopping</a>
-        <a href="">News/Updates</a>
+        <a href="EditProfile.jsp">Edit Profile</a>
+        <a href="Shopping.jsp">Shopping</a>
+        <a href="NewsUpdates.jsp">News/Updates</a>
     </div>
 </div>
 <!-- FIN QUI-->
@@ -65,4 +66,5 @@
     }else{
 %>
         <h1>SEI GIA LOGGATO!</h1>
+<a href="index.jsp"> torna indietro </a>
 <%}%>

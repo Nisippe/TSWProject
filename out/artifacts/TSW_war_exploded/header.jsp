@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>Counter-Strike</title>
-    <link href="css/HomePage.css" rel="stylesheet">
+    <link href="css/HomePage.css" rel="stylesheet" />
+    <link href="css/footerPage.css" rel="stylesheet" />
 </head>
 <body>
 <div class="container">
@@ -12,11 +13,11 @@
     </div>
 
     <div class="navbar">
-        <a href="./index.jsp">Home</a>
-        <a href="./login-register.jsp">Login/Register</a>
-        <a href="">Edit Profile</a>
-        <a href="./Shopping.jsp">Shopping</a>
-        <a href="">News/Updates</a>
+        <a href="index.jsp">Home</a>
+        <a href="login-register.jsp">Login/Register</a>
+        <a href="EditProfile.jsp">Edit Profile</a>
+        <a href="Shopping.jsp">Shopping</a>
+        <a href="NewsUpdates.jsp">News/Updates</a>
     </div>
     <div class="right">
         <!--Ajax-->
@@ -24,6 +25,14 @@
     </div>
 
     <div class="carrello">
-        <a href=""><img src="images/cart.png" alt="carrello" class="cart"/></a>
+        <%
+            if(request.getSession().getAttribute("utente")!=null){
+        %>
+        <a href="Carrello.jsp"><img src="images/cart.png" alt="carrello" class="cart"/></a>
+        <% }else{%>
+        <a href="login-register.jsp"><img src="images/cart.png" alt="carrello" class="cart"/></a>
+        <%
+
+        %>
     </div>
 </div>

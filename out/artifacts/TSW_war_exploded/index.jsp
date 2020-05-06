@@ -6,12 +6,12 @@
 
 
   <%
-      if(request.getSession().getAttribute("utente")==null) {
+      if(session==null) {
       }else{
           
   %>
-  <form action="/Logout">
-      <div class="nome"><a href="index.jsp"><img src="images/Logout.png" style="max-width: 50%;max-height: 50%;"/></a></div>
+  <form action="Logout">
+      <div class="nome"><input type="submit" value="logout"></div>
   </form>
   <%
       }
@@ -40,3 +40,6 @@
   </div>
 </div>
 
+  <jsp:include page="footer.jsp">
+      <jsp:param name="pageFooter" value="Home"/>
+  </jsp:include>

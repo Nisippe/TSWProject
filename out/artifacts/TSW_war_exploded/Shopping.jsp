@@ -23,11 +23,13 @@
                 <h3>
                     <a href="Prodotto?nome=<c:out value="${prodotto.nome}"/>"><c:out value="${prodotto.nome}" /></a>
                 </h3>
-                <a href="Prodotto?nome=<c:out value="${prodotto.nome}"/>"><img src="./images/Armi/<c:out value="${prodotto.nome}"/>.jpg" alt="${prodotto.nome}" style="border: 5px solid #000000"></a>
-                <h4><c:out value="${prodotto.prezzo}" /> &euro;</h4>
+                <h4><c:out value="${prodotto.prezzo}" /> &euro;</h4><a href="Prodotto?nome=<c:out value="${prodotto.nome}"/>"><img src="./images/Armi/<c:out value="${prodotto.nome}"/>.jpg" alt="${prodotto.nome}" style="border: 5px solid #000000"></a>
+
             </div>
         </c:forEach>
 
     </grid>
 
-
+<jsp:include page="footer.jsp">
+    <jsp:param name="pageFooter" value="Home"/>
+</jsp:include>
