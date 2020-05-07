@@ -97,8 +97,7 @@ body{
 .nome{
     position: absolute;
     left: 94.5%;
-    bottom: 95.5%;
-
+    bottom: 78%;
 }
 
 .cs-body-footer{
@@ -127,3 +126,4 @@ body{
     grid-gap: 10px;
     padding: 10px;
 }
+

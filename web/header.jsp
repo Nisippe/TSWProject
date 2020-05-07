@@ -15,7 +15,17 @@
     <div class="navbar">
         <a href="index.jsp">Home</a>
         <a href="login-register.jsp">Login/Register</a>
+        <%
+            if(request.getSession().getAttribute("utente")==null) {
+        %>
+        <a href="login-register.jsp">Edit Profile</a>
+        <%
+        }else{
+        %>
         <a href="EditProfile.jsp">Edit Profile</a>
+        <%
+            }
+        %>
         <a href="Shopping.jsp">Shopping</a>
         <a href="NewsUpdates.jsp">News/Updates</a>
     </div>
@@ -25,8 +35,31 @@
     </div>
 
     <div class="carrello">
-    
+
+        <%
+            if(request.getSession().getAttribute("utente")==null) {
+               %>
+
+        <a href="login-register.jsp"><img src="images/cart.png" alt="carrello" class="cart"/></a>
+    <%
+            }else{
+    %>
         <a href="Carrello.jsp"><img src="images/cart.png" alt="carrello" class="cart"/></a>
+    <%
+        }
+    %>
+    </div>
+    <%
+        if(request.getSession().getAttribute("utente")==null) {
+        }else{
+
+    %>
+    <form action="Logout">
+        <div class="nome"><input type="submit" value="logout"></div>
+    </form>
+    <%
+        }
+    %>
 
     </div>
 </div>

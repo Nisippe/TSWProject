@@ -5,18 +5,8 @@
   <!-- FIN QUI-->
 
 
-  <%
-      if(session==null) {
-      }else{
-          
-  %>
-  <form action="Logout">
-      <div class="nome"><input type="submit" value="logout"></div>
-  </form>
-  <%
-      }
-  %>
-  <div class="center"><img src="images/Novitatext.png" alt="Novità"/></div>
+
+  <div class="center"><h1>Novita'</h1></div>
 
 <div class="row">
   <div class="item">
@@ -25,17 +15,17 @@
   </div>
 
   <div class="item">
-      <a href=""><img src="images/Armi/M4A1.png" alt="m4" class="image"></a>
+      <a href=""><img src="images/Armi/M4A1-S.jpg" alt="m4" class="image"></a>
       <div class="overlay">M4-A1</div>
   </div>
 
   <div class="item">
-      <a href=""><img src="images/Armi/awp.jpg" alt="awp" class="image"></a>
+      <a href=""><img src="images/Armi/AWP.jpg" alt="awp" class="image"></a>
       <div class="overlay">AWP</div>
   </div>
 
   <div class="item">
-      <a href=""><img src="images/Armi/p90.png" alt="p90" class="image"></a>
+      <a href=""><img src="images/Armi/P90.jpg" alt="p90" class="image"></a>
       <div class="overlay">P90</div>
   </div>
 </div>
