@@ -14,7 +14,13 @@
 
     <div class="navbar">
         <a href="index.jsp">Home</a>
+        <%
+            if(request.getSession().getAttribute("utente")==null){
+        %>
         <a href="login-register.jsp">Login/Register</a>
+        <%
+            }
+        %>
         <%
             if(request.getSession().getAttribute("utente")==null) {
         %>
