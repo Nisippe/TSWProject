@@ -11,8 +11,19 @@
     </div>
 
     <%
-        MerceDAO merceDAO=new MerceDAO();
-        ArrayList<Merce> prodotti= (ArrayList<Merce>) merceDAO.doRetrieveAll();
+        MerceDAO merceDAO = new MerceDAO();
+           ArrayList<Merce> prodotti;
+        if(request.getAttribute("filtro") == "rifle")
+            prodotti = (ArrayList<Merce>) merceDAO.doRetrieveByCat("Fucile d'assalto");
+        else if(request.getAttribute("filtro") == "heavy")
+            prodotti = (ArrayList<Merce>) merceDAO.doRetrieveByCat("Arma Pesante");
+        else if(request.getAttribute("filtro") == "mitra")
+            prodotti = (ArrayList<Merce>) merceDAO.doRetrieveByCat("Mitra");
+        else if(request.getAttribute("filtro") == "pistol")
+            prodotti = (ArrayList<Merce>) merceDAO.doRetrieveByCat("Pistola");
+        else
+            prodotti = (ArrayList<Merce>) merceDAO.doRetrieveAll();
+
         request.setAttribute("prodotti",prodotti);
     %>
 

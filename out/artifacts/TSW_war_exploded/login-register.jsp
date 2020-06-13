@@ -14,35 +14,24 @@
 <div class="container">
     <img src="images/background.png" style="width: 100%; height:10%"/>
     <div class="left">
-        <img src="images/logo.png" alt="logo"/>
+        <a href="index.jsp"><img src="images/logo.png" alt="logo"/></a>
     </div>
     <div class="right">
         <!-- LOGIN -->
         <form action="Register">
             <div class="row">
-                <div class="form"><input type="text" placeholder="username" id="namebox" name="userlogin"/></div>
-                <div class="form"><input type="password" id="namebox" name="passlogin"/></div>
+                <div class="form"><input type="text" placeholder="username" class="namebox" name="userlogin"/></div>
+                <div class="form"><input type="password" class="namebox" name="passlogin"/></div>
                 <div class="form1"><input type="submit" class="button2" value="Login"/> </div>
             </div>
         </form>
     </div>
 
     <div class="navbar">
-        <a href="index.jsp">Home</a>
-        <a href="login-register.jsp">Login/Register</a>
-        <%
-            if(request.getSession().getAttribute("utente")==null) {
-        %>
-        <a href="login-register.jsp">Edit Profile</a>
-        <%
-        }else{
-        %>
-        <a href="EditProfile.jsp">Edit Profile</a>
-        <%
-            }
-        %>
-        <a href="Shopping.jsp">Shopping</a>
-        <a href="NewsUpdates.jsp">News/Updates</a>
+        <a href="">RIFLE</a>
+        <a href="">SNIPER</a>
+        <a href="">SNIPER</a>
+        <a href="">PISTOL</a>
     </div>
 </div>
 <!-- FIN QUI-->
@@ -54,18 +43,19 @@
     <div id="img2" class="cs-body"><img src="images/world.png" /></div>
     <div id="intro3" class="cs-body">veloce e semplice</div>
     <div id="form3" class="cs-body">
-        <form action="Register">
-        <input placeholder="Nickname" type="text" id="mailbox" name="nick" /> <br>
-        <input placeholder="Nome" type="text" id="namebox" name="nome" />
-        <input placeholder="Cognome" type="text" id="namebox" name="cognome"  /> <br>
-        <input placeholder="Email" type="text" id="mailbox" name="mail" /><br>
-        <input placeholder="Password" type="password" id="namebox" name="password" />
-        <input placeholder="Conferma Password" type="password" id="namebox" name="cpassword" /><br>
+        <form name='registrazione' action="Register" method="post">
+            <label>Nickname (almeno 6 caratteri)<br>Password (almeno 8 caratteri, deve contenere: una lettera maiuscola, una minuscola, un numero)</label>
+        <input placeholder="Nickname" type="text" class="mailbox" name="nick"  oninput="validaUsername()"/> <br>
+        <input placeholder="Nome" type="text" class="namebox" name="nome" oninput="validaNome()" />
+        <input placeholder="Cognome" type="text" class="namebox" name="cognome"  oninput="validaCognome()"/> <br>
+        <input placeholder="Email" type="text" class="mailbox" name="mail" oninput="validaEmail()"/><br>
+        <input placeholder="Password" type="password" class="namebox" name="password" oninput="validaPassword()"/>
+        <input placeholder="Conferma Password" type="password" class="namebox" name="cpassword" oninput="validaPassword()"/><br>
         <p id="intro4">Data di nascita</p>
-        <input type="date" id="mailbox" name="date" /><br><br>
+        <input type="date" class="mailbox" name="date" /><br><br>
         <p id="intro4">By clicking Create an account, you agree to our Terms and that
             you have read our Data Policy, including our Cookie Use.</p>
-        <input type="submit" class="button2"  name="register" value="Create an account" />
+        <input type="submit" class="button2"  name="registrami" value="Create an account" disabled/><span id="registramimessaggio"></span>
         <br><hr>
         <p id="intro4">Compra un'arma!</p>
             </form>
@@ -78,3 +68,109 @@
         <h1>SEI GIA LOGGATO!</h1>
 <a href="index.jsp"> torna indietro </a>
 <%}%>
+
+<script>
+    var borderok='5px solid #080';
+    var borderno='5px solid red';
+    var nicknameok=false;
+    var passwordok=false;
+    var nomeok=false;
+    var cognomeok=false;
+    var emailok=false;
+
+    function validaUsername() {
+        var input = document.forms['registrazione']['nick'];
+        if(input.value.length >= 6){
+            var xmlHttpReq =new XMLHttpRequest();
+            xmlHttpReq.onreadystatechange=function () {
+                if(this.readyState==4 && this.status==200 && this.responseText=='<ok/>'){
+                    nicknameok=true;
+                    input.style.border=borderok;
+                }else{
+                    input.style.border=borderno;
+                    nicknameok=false;
+                }
+                cambiaStatoRegistrami();
+            }
+            xmlHttpReq.open("GET","VerificaUsername?nick=" + encodeURIComponent(input.value),true);
+            xmlHttpReq.send();
+        }else{
+            input.style.border=borderno;
+            nicknameok=false;
+            cambiaStatoRegistrami();
+        }
+    }
+
+    function validaPassword() {
+        var inputpw = document.forms['registrazione']['password'];
+        var inputpwconf = document.forms['registrazione']['cpassword'];
+        var password = inputpw.value;
+        if (password.length >= 8 && password.toUpperCase() != password
+            && password.toLowerCase() != password) {
+            inputpw.style.border = borderok;
+
+            if (password == inputpwconf.value) {
+                inputpwconf.style.border = borderok;
+                passwordok = true;
+            } else {
+                inputpwconf.style.border = borderno;
+                passwordok = false;
+            }
+        } else {
+            inputpw.style.border = borderno;
+            inputpwconf.style.border = borderno;
+            passwordok = false;
+        }
+        cambiaStatoRegistrami();
+    }
+
+    function validaNome() {
+        var input = document.forms['registrazione']['nome'];
+        if (input.value.trim().length > 0
+            && input.value.match(/^[ a-zA-Z\u00C0-\u00ff]+$/)) {
+            input.style.border = borderok;
+            nomeok = true;
+        } else {
+            input.style.border = borderno;
+            nomeok = false;
+        }
+        cambiaStatoRegistrami();
+    }
+
+    function validaCognome() {
+        var input = document.forms['registrazione']['cognome'];
+        if (input.value.trim().length > 0
+            && input.value.match(/^[ a-zA-Z\u00C0-\u00ff]+$/)) {
+            input.style.border = borderok;
+            cognomeok = true;
+        } else {
+            input.style.border = borderno;
+            cognomeok = false;
+        }
+        cambiaStatoRegistrami();
+    }
+
+    function validaEmail() {
+        var input = document.forms['registrazione']['mail'];
+        if (input.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w+)+$/)) {
+            input.style.border = borderok;
+            emailok = true;
+        } else {
+            input.style.border = borderno;
+            emailok = false;
+        }
+        cambiaStatoRegistrami();
+    }
+
+
+    function cambiaStatoRegistrami() {
+        if (nicknameok && cognomeok && passwordok && nomeok && emailok) {
+            document.getElementById('registrami').disabled = false;
+            document.getElementById('registramimessaggio').innerHTML = '';
+        } else {
+            document.getElementById('registrami').disabled = true;
+            document.getElementById('registramimessaggio').innerHTML = 'Verifica che tutti i campi siano in verde.';
+        }
+    }
+</script>
+</script>

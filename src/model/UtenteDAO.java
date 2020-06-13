@@ -30,10 +30,32 @@ public class UtenteDAO {
         }
     }
 
+    public Utente doRetrieveByNickname(String nickname) {
+        try (Connection con = ConPool.getConnection()) {
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM Utente where nickname=?");
+            ps.setString(1, nickname);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                Utente u = new Utente();
+                u.setNickname(rs.getString(1));
+                u.setNome(rs.getString(2));
+                u.setCognome(rs.getString(3));
+                u.setPasswordn(rs.getString(4));
+                u.setEmail(rs.getString(5));
+                u.setGiorno(rs.getInt(6));
+                u.setMese(rs.getInt(7));
+                u.setAnno(rs.getInt(8));
+                return u;
+            }
+            return null;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
 
-
-    public void doSave(Utente utente){
+        public void doSave(Utente utente){
         try (Connection con = ConPool.getConnection()) {
             PreparedStatement ps = con.prepareStatement("INSERT INTO utente VALUES(?,?,?,?,?,?,?,?)");
             ps.setString(1, utente.getNickname());
