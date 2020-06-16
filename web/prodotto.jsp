@@ -6,10 +6,7 @@
     <jsp:param name="pageTitle" value="Home"/>
 </jsp:include>
 
-<%
-    MerceDAO merceDAO=new MerceDAO();
-    request.setAttribute("prodotto",merceDAO.doRetrieveByNome(request.getParameter("nome")));
-%>
+
 
 <img src="./images/Armi/<c:out value="${prodotto.nome}"/>.jpg" alt="${prodotto.nome}" style="border: 5px solid #000000"></a>
 
@@ -19,9 +16,10 @@
 </div>
 
 <h4><c:out value="${prodotto.descrizione}"/></h4>
-<form action="">
+<form action="Carrello">
     <c:choose>
     <c:when test="${prodotto.quantita ne 0}">
+        <input type="hidden" name="nome" value="${prodotto.nome}">
     <input type="submit" class="button1" value="Aggiungi al carrello">
     </c:when>
     <c:otherwise>

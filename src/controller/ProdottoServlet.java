@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "ProdottoServlet")
+@WebServlet("/Prodotto")
 public class ProdottoServlet extends HttpServlet {
     private final MerceDAO merceDAO=new MerceDAO();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

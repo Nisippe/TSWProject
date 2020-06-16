@@ -52,7 +52,7 @@
         <a href="login-register.jsp"><img src="images/cart.png" alt="carrello" class="cart"/>Carrello</a>
         </c:when>
         <c:otherwise>
-        <a href="Carrello.jsp"><img src="images/cart.png" alt="carrello" class="cart"/>Carrello</a>
+        <a href="Carrello"><img src="images/cart.png" alt="carrello" class="cart"/>Carrello</a>
         </c:otherwise>
         </c:choose>
        </div>

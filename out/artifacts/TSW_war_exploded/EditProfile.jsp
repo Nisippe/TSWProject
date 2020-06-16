@@ -11,10 +11,10 @@
 
 <form name="aggiorna" action="" method="post">
     <h1>Aggiorna dati</h1>
-    Nome<input type="text" name="nome" value="<c:out value="${utente.nome}"/>" oninput="validaNome()"/><br>
-    Cognome<input type="text" name="cognome" value="<c:out value="${utente.cognome}"/>" oninput="validaCognome()"/><br>
-    email<input type="text" name="email" value="<c:out value="${utente.email}"/>" oninput="validaEmail()"/><br>
-    password<input type="text" name="password" value="<c:out value="${utente.passwordn}"/>" oninput="validaPassword()"/><br>
+    Nome<input type="text" name="nome" placeholder="<c:out value="${utente.nome}"/>" oninput="validaNome()"/><br>
+    Cognome<input type="text" name="cognome" placeholder="<c:out value="${utente.cognome}"/>" oninput="validaCognome()"/><br>
+    email<input type="text" name="email" placeholder="<c:out value="${utente.email}"/>" oninput="validaEmail()"/><br>
+    password<input type="text" name="password" placeholder="<c:out value="${utente.passwordn}"/>" oninput="validaPassword()"/><br>
     <input type="submit" id="edit" value="Salva le modifiche"/>
 </form>
 

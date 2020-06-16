@@ -29,13 +29,10 @@ public class Carrello {
             this.quantita = quantita;
         }
 
-        public long getPrezzoTotCent(){
+        public long getPrezzoTotEuro(){
             return (long) (quantita*merce.getPrezzo());
         }
 
-        public String getPrezzoTotEuro(){
-            return String.format("%.2f",quantita*merce.getPrezzo() / 100.);
-        }
     }
 
     private LinkedHashMap<String,ProdottoQuantita> prodotti=new LinkedHashMap<>();
@@ -56,11 +53,8 @@ public class Carrello {
         return prodotti.remove(nome);
     }
 
-    public long getPrezzoTotCent(){
-        return prodotti.values().stream().mapToLong(p->p.getPrezzoTotCent()).sum();
+    public long getPrezzoTotEuro(){
+        return prodotti.values().stream().mapToLong(p->p.getPrezzoTotEuro()).sum();
     }
 
-    public String getPrezzoTotEuro() {
-    		return String.format("%.2f", getPrezzoTotCent() / 100.);
-    	}
-}
+ 	}
