@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 
@@ -7,9 +8,8 @@
     <link href="css/footerPage.css" rel="stylesheet" />
 </head>
 <body>
-<%
-    if(request.getSession().getAttribute("utente")==null) {
-%>
+<c:choose>
+<c:when test="${utente == null}">
 <!-- UGUALE AD OGNI PAGINA -->
 <div class="container">
     <img src="images/background.png" style="width: 100%; height:10%"/>
@@ -18,7 +18,7 @@
     </div>
     <div class="right">
         <!-- LOGIN -->
-        <form action="Register">
+        <form action="login">
             <div class="row">
                 <div class="form"><input type="text" placeholder="username" class="namebox" name="userlogin"/></div>
                 <div class="form"><input type="password" class="namebox" name="passlogin"/></div>
@@ -28,10 +28,9 @@
     </div>
 
     <div class="navbar">
-        <a href="">RIFLE</a>
-        <a href="">SNIPER</a>
-        <a href="">SNIPER</a>
-        <a href="">PISTOL</a>
+        <c:forEach items="${categorie}" var="categoria">
+            <a href="Shopping.jsp?categoria=${categoria}"> <c:out value="${categoria}"/>  </a>
+        </c:forEach>
     </div>
 </div>
 <!-- FIN QUI-->
@@ -52,22 +51,21 @@
         <input placeholder="Password" type="password" class="namebox" name="password" oninput="validaPassword()"/>
         <input placeholder="Conferma Password" type="password" class="namebox" name="cpassword" oninput="validaPassword()"/><br>
         <p id="intro4">Data di nascita</p>
-        <input type="date" class="mailbox" name="date" /><br><br>
+        <input type="date" class="mailbox" name="date" max="2002-06-13" oninput="validaData()" /><br><br>
         <p id="intro4">By clicking Create an account, you agree to our Terms and that
             you have read our Data Policy, including our Cookie Use.</p>
-        <input type="submit" class="button2"  name="registrami" value="Create an account" disabled/><span id="registramimessaggio"></span>
+        <input type="submit" class="button2"  id="registrami" value="Create an account" disabled/><span id="registramimessaggio"></span>
         <br><hr>
         <p id="intro4">Compra un'arma!</p>
             </form>
     </div>
 </div>
-
-<%
-    }else{
-%>
+</c:when>
+<c:otherwise>
         <h1>SEI GIA LOGGATO!</h1>
 <a href="index.jsp"> torna indietro </a>
-<%}%>
+</c:otherwise>
+</c:choose>
 
 <script>
     var borderok='5px solid #080';
@@ -77,6 +75,7 @@
     var nomeok=false;
     var cognomeok=false;
     var emailok=false;
+    var dataok=false;
 
     function validaUsername() {
         var input = document.forms['registrazione']['nick'];
@@ -162,9 +161,21 @@
         cambiaStatoRegistrami();
     }
 
+    function validaData(){
+        var input = document.forms['registrazione']['date'];
+        if(input != "")
+        {
+            input.style.border=borderok;
+            dataok=true;
+        }else{
+            input.style.border=borderno;
+            dataok=false;
+        }
+        cambiaStatoRegistrami();
+    }
 
     function cambiaStatoRegistrami() {
-        if (nicknameok && cognomeok && passwordok && nomeok && emailok) {
+        if (nicknameok && cognomeok && passwordok && nomeok && emailok && dataok) {
             document.getElementById('registrami').disabled = false;
             document.getElementById('registramimessaggio').innerHTML = '';
         } else {
@@ -173,4 +184,4 @@
         }
     }
 </script>
-</script>
+

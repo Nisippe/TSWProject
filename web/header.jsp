@@ -4,7 +4,7 @@
 <head>
     <title>Counter-Strike</title>
     <link href="css/HomePage.css" rel="stylesheet" />
-
+    <meta charset="UTF-8">
 </head>
 <body>
 
@@ -15,7 +15,7 @@
            <p> <a href="login-register.jsp">Login</a> | <a href="login-register.jsp">Register</a></p>
        </c:when>
        <c:otherwise>
-            <a href="EditProfile.jsp"><%=(((Utente)request.getSession().getAttribute("utente")).getNickname())%></a>
+            <a href="EditProfile.jsp"><c:out value="${utente.nickname}" /></a>
         </c:otherwise>
     </c:choose>
     </div>
@@ -28,16 +28,16 @@
         <a href="index.jsp"><img src="images/logo.png" class="logo" alt="logo"/></a>
     </div>
 
-    <form id="cat" method="post" action="category">
+
     <div class="navbar">
        <c:forEach items="${categorie}" var="categoria">
-           <a href="Shopping?categoria=<c:out value="${categoria}"/>"><c:out value="${categoria}"/></a>
+           <a href="Shopping.jsp?categoria=${categoria}"> <c:out value="${categoria}"/>  </a>
        </c:forEach>
     </div>
-    </form>
 
 
-    <form action="">
+
+    <form action="ricerca">
 
         <div id="search_wrapper">
             <input type="text" id="search_field" name="search" placeholder="Cerca..." />
@@ -47,18 +47,13 @@
     </form>
 
     <div class="carrello">
-
-        <%
-            if(request.getSession().getAttribute("utente")==null) {
-               %>
-
+        <c:choose>
+        <c:when test="${utente == null}">
         <a href="login-register.jsp"><img src="images/cart.png" alt="carrello" class="cart"/>Carrello</a>
-    <%
-            }else{
-    %>
+        </c:when>
+        <c:otherwise>
         <a href="Carrello.jsp"><img src="images/cart.png" alt="carrello" class="cart"/>Carrello</a>
-    <%
-        }
-    %>
+        </c:otherwise>
+        </c:choose>
        </div>
 </div>

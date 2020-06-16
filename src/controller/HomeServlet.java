@@ -18,8 +18,10 @@ public class HomeServlet extends HttpServlet {
 
     public void init() throws ServletException{
         MerceDAO merceDAO=new MerceDAO();
+        List<Merce> prodotti=merceDAO.doRetrieveAll();
         List<String> categorie=merceDAO.doRetrieveCategory();
         getServletContext().setAttribute("categorie",categorie);
+        getServletContext().setAttribute("prodotti",prodotti);
         super.init();
     }
 

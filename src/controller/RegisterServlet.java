@@ -14,15 +14,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 @WebServlet("/Register")
-public class RegisterLoginServlet extends HttpServlet {
+public class RegisterServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        if(request.getParameter("register")!=null) {
             if (request.getSession().getAttribute("utente") != null) {
                 throw new MyServletException("Utente loggato.");
             }
             UtenteDAO utenteDAO = new UtenteDAO();
-            ArrayList<Utente> utenti = (ArrayList<Utente>) utenteDAO.doRetrieveAll();
             String nickname = request.getParameter("nick");
             if (!(nickname != null && nickname.length() >=6)){
                 throw new MyServletException("Nickname non valido.");
@@ -73,23 +71,8 @@ public class RegisterLoginServlet extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
             dispatcher.forward(request, response);
 
-        }else{
-            UtenteDAO utenteDAO = new UtenteDAO();
-            ArrayList<Utente> utenti = (ArrayList<Utente>) utenteDAO.doRetrieveAll();
-            String username=request.getParameter("userlogin");
-            String password=request.getParameter("passlogin");
-            System.out.println(username+" sta cercando di entrare");
-            for(int i=0;i<utenti.size();i++)
-                if(utenti.get(i).getNickname().equals(username) && utenti.get(i).getPasswordn().equals(password)) {
-                    HttpSession session=request.getSession(true);
-                    session.setAttribute("utente", utenti.get(i));
-                    RequestDispatcher dispatcher=request.getRequestDispatcher("index.jsp");
-                    dispatcher.forward(request,response);
-                }
-                throw new ServletException("Login Non corretto");
-
-        }
     }
+
 
 
     protected void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
