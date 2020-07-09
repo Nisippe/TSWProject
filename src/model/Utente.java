@@ -3,8 +3,9 @@ package model;
 
 
 public class Utente {
-    public Utente(String nickname, String nome, String cognome, String passwordn, String email, int giorno,int mese,int anno) {
+    public Utente(String nickname,boolean admind, String nome, String cognome, String passwordn, String email, int giorno,int mese,int anno) {
         this.nickname = nickname;
+        this.admind = admind;
         this.nome = nome;
         this.cognome = cognome;
         this.passwordn = passwordn;
@@ -81,7 +82,17 @@ public class Utente {
         this.anno = anno;
     }
 
+
+    public boolean isAdmind() {
+        return admind;
+    }
+
+    public void setAdmind(boolean admind) {
+        this.admind = admind;
+    }
+
     public String nickname;
+    public boolean admind;
     public String nome;
     public String cognome;
     public String passwordn;

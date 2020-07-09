@@ -1,5 +1,7 @@
 package controller;
 
+import model.MerceDAO;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,19 +13,10 @@ import java.io.IOException;
 @WebServlet("/category")
 public class CategoryServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.print("mammt");
-        String filter;
-            if(request.getParameter("rifle") != null)
-                filter="rifle";
-            else if(request.getParameter("heavy") != null)
-                filter="heavy";
-            else if(request.getParameter("mitra") != null)
-                filter="mitra";
-            else
-                filter="pistol";
+        String categoria=request.getParameter("categoria");
+        MerceDAO merceDAO=new MerceDAO();
+        request.setAttribute("prodotti",merceDAO.doRetrieveByCat(request.getParameter("categoria")));
 
-            request.setAttribute("filtro",filter);
-            System.out.print("mammt");
         RequestDispatcher dispatcher=request.getRequestDispatcher("Shopping.jsp");
         dispatcher.forward(request,response);
     }

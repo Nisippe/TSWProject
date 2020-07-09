@@ -58,6 +58,9 @@
         <br><hr>
         <p id="intro4">Compra un'arma!</p>
             </form>
+
+
+
     </div>
 </div>
 </c:when>

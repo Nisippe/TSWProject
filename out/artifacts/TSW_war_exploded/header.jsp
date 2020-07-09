@@ -31,7 +31,7 @@
 
     <div class="navbar">
        <c:forEach items="${categorie}" var="categoria">
-           <a href="Shopping.jsp?categoria=${categoria}"> <c:out value="${categoria}"/>  </a>
+           <a href="category?categoria=${categoria}"> <c:out value="${categoria}"/>  </a>
        </c:forEach>
     </div>
 
@@ -49,10 +49,10 @@
     <div class="carrello">
         <c:choose>
         <c:when test="${utente == null}">
-        <a href="login-register.jsp"><img src="images/cart.png" alt="carrello" class="cart"/>Carrello</a>
+        <a href="login-register.jsp"><img src="images/cart.png" alt="carrello" class="cart"/></a>
         </c:when>
         <c:otherwise>
-        <a href="Carrello"><img src="images/cart.png" alt="carrello" class="cart"/>Carrello</a>
+        <a href="Carrello"><img src="images/cart.png" alt="carrello" class="cart"/></a>
         </c:otherwise>
         </c:choose>
        </div>

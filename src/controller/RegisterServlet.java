@@ -65,7 +65,7 @@ public class RegisterServlet extends HttpServlet {
             if (!(password.equals(cpassword)))
                 throw new ServletException("Le due password sono differenti");
 
-            Utente u = new Utente(nickname, nome, cognome, password, email, Integer.parseInt(day), Integer.parseInt(month), Integer.parseInt(year));
+            Utente u = new Utente(nickname,false, nome, cognome, password, email, Integer.parseInt(day), Integer.parseInt(month), Integer.parseInt(year));
             utenteDAO.doSave(u);
             request.getSession().setAttribute("utente",u);
             RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");

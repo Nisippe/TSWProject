@@ -6,16 +6,6 @@
     <jsp:param name="pageTitle" value="Home"/>
 </jsp:include>
 
-    <div>
-    <!--Filtri-->
-    </div>
-
-    <%
-        MerceDAO merceDAO=new MerceDAO();
-           request.setAttribute("prodotti",merceDAO.doRetrieveByCat(request.getParameter("categoria")));
-    %>
-
-
     <grid>
 
       <c:forEach items="${prodotti}" var="prodotto">

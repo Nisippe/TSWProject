@@ -1,9 +1,6 @@
 package model;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,6 +65,33 @@ public class MerceDAO {
         }
     }
 
+    public ArrayList<Merce> doRetrieveByWord(String nome){
+        try(Connection con=ConPool.getConnection()){
+            PreparedStatement ps=con.prepareStatement("Select *, MATCH(nome,descrizione) AGAINST (?) from merce WHERE MATCH(nome,descrizione) AGAINST (?)");
+            ps.setString(1,nome);
+            ps.setString(2,nome);
+            ResultSet rs=ps.executeQuery();
+            ArrayList<Merce> prodotti=new ArrayList<Merce>();
+            while(rs.next()){
+                Merce m = new Merce();
+                m.setNome(rs.getString(1));
+                m.setPrezzo(rs.getDouble(2));
+                m.setQuantita(rs.getInt(3));
+                m.setDescrizione(rs.getString(4));
+                m.setCategoria(rs.getString(5));
+                m.setTipomerce(rs.getString(6));
+                m.setTipoequipaggiamento(rs.getString(7));
+                m.setTipomunizioni(rs.getString(8));
+                prodotti.add(m);
+            }
+            return prodotti;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
 
     public Merce doRetrieveByNome(String nome){
         try (Connection con = ConPool.getConnection()) {
@@ -93,6 +117,15 @@ public class MerceDAO {
         }
     }
 
+
+    public void doRemove(String name){
+        try (Connection con = ConPool.getConnection()) {
+            Statement ps = con.createStatement();
+            ps.executeUpdate("DELETE from merce where nome='" + name + "'");
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+    }
 
     }
 

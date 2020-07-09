@@ -15,13 +15,14 @@ public class UtenteDAO {
             while (rs.next()) {
                 Utente u = new Utente();
                 u.setNickname(rs.getString(1));
-                u.setNome(rs.getString(2));
-                u.setCognome(rs.getString(3));
-                u.setPasswordn(rs.getString(4));
-                u.setEmail(rs.getString(5));
-                u.setGiorno(rs.getInt(6));
-                u.setMese(rs.getInt(7));
-                u.setAnno(rs.getInt(8));
+                u.setAdmind(rs.getBoolean(2));
+                u.setNome(rs.getString(3));
+                u.setCognome(rs.getString(4));
+                u.setPasswordn(rs.getString(5));
+                u.setEmail(rs.getString(6));
+                u.setGiorno(rs.getInt(7));
+                u.setMese(rs.getInt(8));
+                u.setAnno(rs.getInt(9));
                 utenti.add(u);
             }
             return utenti;
@@ -38,13 +39,14 @@ public class UtenteDAO {
             if (rs.next()) {
                 Utente u = new Utente();
                 u.setNickname(rs.getString(1));
-                u.setNome(rs.getString(2));
-                u.setCognome(rs.getString(3));
-                u.setPasswordn(rs.getString(4));
-                u.setEmail(rs.getString(5));
-                u.setGiorno(rs.getInt(6));
-                u.setMese(rs.getInt(7));
-                u.setAnno(rs.getInt(8));
+                u.setAdmind(rs.getBoolean(2));
+                u.setNome(rs.getString(3));
+                u.setCognome(rs.getString(4));
+                u.setPasswordn(rs.getString(5));
+                u.setEmail(rs.getString(6));
+                u.setGiorno(rs.getInt(7));
+                u.setMese(rs.getInt(8));
+                u.setAnno(rs.getInt(9));
                 return u;
             }
             return null;
@@ -57,15 +59,16 @@ public class UtenteDAO {
 
         public void doSave(Utente utente){
         try (Connection con = ConPool.getConnection()) {
-            PreparedStatement ps = con.prepareStatement("INSERT INTO utente VALUES(?,?,?,?,?,?,?,?)");
+            PreparedStatement ps = con.prepareStatement("INSERT INTO utente VALUES(?,?,?,?,?,?,?,?,?)");
             ps.setString(1, utente.getNickname());
-            ps.setString(2, utente.getNome());
-            ps.setString(3, utente.getCognome());
-            ps.setString(4, utente.getPasswordn());
-            ps.setString(5, utente.getEmail());
-            ps.setInt(6,utente.getGiorno());
-            ps.setInt(7,utente.getMese());
-            ps.setInt(8,utente.getAnno());
+            ps.setBoolean(2,false);
+            ps.setString(3, utente.getNome());
+            ps.setString(4, utente.getCognome());
+            ps.setString(5, utente.getPasswordn());
+            ps.setString(6, utente.getEmail());
+            ps.setInt(7,utente.getGiorno());
+            ps.setInt(8,utente.getMese());
+            ps.setInt(9,utente.getAnno());
             if (ps.executeUpdate() != 1) {
                 throw new RuntimeException("INSERT error.");
             }
@@ -73,6 +76,17 @@ public class UtenteDAO {
             throw new RuntimeException(e);
         }
     }
+
+
+    public void doRemove(String nickname){
+        try (Connection con = ConPool.getConnection()) {
+            Statement ps = con.createStatement();
+            ps.executeUpdate("DELETE from utente where nickname='" + nickname + "'");
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+    }
+
     }
 
 

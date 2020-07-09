@@ -200,12 +200,15 @@ input[type=submit] {
 
 }
 
+@media only screen and (max-width: 850px){
+    img{width: 50%;}
+}
+
 .info{
     position: relative;
 }
 
 .button1{
-    position: absolute;
     background-color: #4CAF50;
     color: white;
     border: none;

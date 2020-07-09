@@ -22,6 +22,14 @@
     <input type="submit" class="button3" value="LOGOUT"/>
 </form>
 
+<c:if test="${utente.admind == true}">
+    <a href="users">EDIT UTENTI</a><br>
+    <a href="editp">EDIT MERCE</a>
+</c:if>
+
+
+
+
 <jsp:include page="footer.jsp">
     <jsp:param name="pageFooter" value="Home"/>
 </jsp:include>

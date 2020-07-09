@@ -1,5 +1,6 @@
 package controller;
 
+
 import model.MerceDAO;
 
 import javax.servlet.RequestDispatcher;
@@ -10,13 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/ricerca")
-public class RicercaServlet extends HttpServlet {
+@WebServlet("/editp")
+public class AdminMerceServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String search=request.getParameter("search");
+
         MerceDAO merceDAO=new MerceDAO();
-        request.setAttribute("prodotti",merceDAO.doRetrieveByWord(search));
-        RequestDispatcher dispatcher=request.getRequestDispatcher("Ricerca.jsp");
+        request.setAttribute("merce",merceDAO.doRetrieveAll());
+
+
+        RequestDispatcher dispatcher=request.getRequestDispatcher("adminprodotti.jsp");
         dispatcher.forward(request,response);
     }
 

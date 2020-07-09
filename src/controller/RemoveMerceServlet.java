@@ -2,6 +2,7 @@ package controller;
 
 import model.MerceDAO;
 
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,13 +11,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/ricerca")
-public class RicercaServlet extends HttpServlet {
+@WebServlet("/rimuovip")
+public class RemoveMerceServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String search=request.getParameter("search");
+
+        String name= (String) request.getParameter("nome");
         MerceDAO merceDAO=new MerceDAO();
-        request.setAttribute("prodotti",merceDAO.doRetrieveByWord(search));
-        RequestDispatcher dispatcher=request.getRequestDispatcher("Ricerca.jsp");
+        merceDAO.doRemove(name);
+
+
+        RequestDispatcher dispatcher=request.getRequestDispatcher("EditProfile.jsp");
         dispatcher.forward(request,response);
     }
 
