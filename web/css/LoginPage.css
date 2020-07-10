@@ -178,3 +178,29 @@ body{
     left: 60%;
     bottom: 47%;
 }
+
+@media only screen and (max-width: 1400px){
+    .cs-body{position: static}
+    #img2{visibility: hidden;width: 0%;height: 0%;}
+    .row{width: 10%;}
+    .right input[type="text"]{
+        width: 100px;
+    }
+
+    .form{
+        right: 100px;
+        left: 0px;
+    }
+
+    .namebox{
+        width: 100px;
+    }
+
+    .button2{
+        width: 175px;
+    }
+
+    .form1{
+        left: 120px
+    }
+}

@@ -1,0 +1,74 @@
+drop database if exists project;
+create database project;
+use project;
+
+create table Utente(
+nickname varchar(50) primary key not null,
+admind boolean null,
+nome varchar(50) not null,
+cognome varchar(50) not null,
+passwordn varchar(50) not null,
+email varchar(50) not null,
+giorno int not null,
+mese int not null,
+anno int not null);
+
+create table CartaDiCredito(
+id int primary key not null unique,
+meses int not null,
+annos int not null,
+cvv int not null);
+#(nome,prezzo,descrizioe,categoria,tipomerce,tipoequipaggiamento,tipomunizioni)
+create table Merce(
+nome varchar(100) primary key ,
+prezzo double not null,
+quantità int not null default 0,
+descrizione varchar(800) not null,
+categoria varchar(50) not null,
+tipomerce varchar(50) not null,
+tipoequipaggiamento varchar(50) null,
+tipomunizioni varchar(50) null,
+FULLTEXT(nome,descrizione)
+);
+
+create table Carrello(
+nickname varchar(50) not null,
+nome varchar(50) not null,
+nElementi int not null,
+primary key(nickname,nome),
+foreign key(nickname) references Utente(nickname) on update cascade on delete cascade,
+foreign key(nome) references Merce(nome) on update cascade on delete cascade);
+
+create table Inserimento(
+nickname varchar(50) not null,
+nome varchar(50) not null,
+primary key(nickname,nome),
+foreign key (nickname) references Utente(nickname) on update cascade on delete cascade,
+foreign key (nome) references Merce(nome) on update cascade on delete cascade);
+
+create table Ordine(
+nickname varchar(50) not null,
+nome varchar(50) not null,
+giorno int not null,
+mese int not null,
+anno int not null,
+primary key(nickname,nome,giorno,mese,anno),
+foreign key (nickname) references Utente(nickname) on update cascade on delete cascade,
+foreign key (nome) references Merce(nome) on update cascade on delete cascade);
+
+create table Possessione(
+id int not null,
+nickname varchar(50) not null,
+primary key(id,nickname),
+foreign key (id) references CartaDiCredito(id) on update cascade on delete cascade,
+foreign key (nickname) references Utente(nickname) on update cascade on delete cascade);
+
+create table Cronologia(
+nickname varchar(50) not null,
+nome varchar(50) not null,
+giorno int not null,
+mese int not null,
+anno int not null,
+consegnato boolean not null,
+primary key(nickname,nome,giorno,mese,anno),
+foreign key(nickname,nome,giorno,mese,anno) references Ordine(nickname,nome,giorno,mese,anno) on update cascade on delete cascade);

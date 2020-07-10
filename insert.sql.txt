@@ -1,0 +1,52 @@
+use project;
+
+INSERT INTO Merce (nome,prezzo,quantità,descrizione,categoria,tipomerce,tipoequipaggiamento,tipomunizioni) 
+VALUES 
+#PISTOLE
+("USP-S",200,5,"USP-S : Fin dal suo debutto nel 1993, Heckler & Koch USP è ora ampiamente utilizzata come una pistola di servizio da parte delle forze armate di polizia.
+Questa replica dal bellissimo design e dalla solida affidabilità la rendono interessante sia per 
+collezionisti che per tiratori.","Pistola","Arma",null,"6mm BB"),
+("GLOCK-18",200,5,"GLOCK-18 : Completamente smontabile come la vera, con meccaniche interne completamente in metallo",
+"Pistola","Arma",null,"6 mm"),
+("BERETTA",300,5,"BERETTA : replica perfetta in scala 1a1 della famosa Beretta 92FS,le misure corrispondono al modello originale, sembra di maneggiare una pistola vera!!!","Pistola","Arma",null,"6 mm"),
+ ("P250",300,5,"P250 : Dotata di slitta piccatiny nella parte inferiore che consente 
+ il montaggio di accessori come laser e torce","Pistola","Arma",null,"4,5 mm (pellets e sferici)"),
+ ("FIVE-SEVEN",500,5,"FIVE-SEVEN : PRODOTTO DI ALTISSIMA QUALITA' 
+ CONSIGLIATO PER COLLEZZIONISTI E SOFTGUNNERS","Pistola","Arma",null,"6 mm"),
+ ("TEC-9",500,5,"TEC-9 : PRODOTTO DI ALTISSIMA QUALITA' 
+ CONSIGLIATO PER COLLEZZIONISTI E SOFTGUNNERS","Pistola","Arma",null,"6 mm"),
+ ("DESERT EAGLE",700,5,"DESERT EAGLE : scarrellante dotata di caricatore in metallo bifilare","Pistola","Arma",null,"6 mm"),
+ #(Nome,prezzo,quantità,descrizione,categoria,tipomerce,tipoequipaggiamento,tipomunizioni)
+
+#Armi pesanti
+("NOVA",1050,5,"NOVA : La Benelli Nova è un fucile da caccia italiano","Arma Pesante","Arma",null,"12 mag"),
+("MAG-7",1300,5,"MAG-7 : Il MAG-7 è un fucile sudafricano fabbricato da Techno Arms PTY dal 1995. È unico per avere una forma relativamente compatta per un fucile da caccia. Famosa per MrFreak","Arma Pesante","Arma",null,"12 mag"),
+("FUCILE A CANNE MOZZE",1100,5,"un fucile Remington 870 modificato con una canna più corta e segata","Arma Pesante","Arma",null,"12/70 mag"),
+("XM1014",2000,5,"Rispetto ai fucili a pompa, ha un tasso di fuoco più alto","Arma Pesante","Arma",null,"12/76 mag"),
+("M249",5200,5,"è la designazione della versione adottata dagli Stati Uniti della belga FN Minimi , una mitragliatrice leggera","Arma Pesante","Arma",null,"5,56x45 mm"),
+("NEGEV",1700,5,"è una mitragliatrice israeliana prodotta da Israel Military Industries","Arma Pesante","Arma",null,"5,56x45 mm"),
+
+#Mitra
+("MAC-10",1050,5,"pistola mitragliatrice","Mitra","Arma",null,"9 mm"),
+("MP5-SD",1500,5,"Spesso imitato ma mai eguagliato, l'iconico MP5 è forse lo SMG più versatile e popolare al mondo","Mitra","Arma",null,"15 mm"),
+("MP7",1500,5,"è un'arma di difesa personale leggera (PDW) tedesca prodotta da Heckler & Koch (H&K), che subentra alla loro mitragliatrice MP5 e che intende competere con la P90","Mitra","Arma",null,"4,6x30mm"),
+("MP9",1250,5,"un mitra prodotta dalla svizzera Brügger & Thomet AG, ed è uno sviluppo della Steyr TMP","Mitra","Arma",null,"9 mm"),
+("P90",2350,5,"è un'arma di difesa personale bullpup belga (PDW) alimentata da un esclusivo caricatore orizzontale","Mitra","Arma",null,"5,7x28 mm"),
+("PP-BIZON",1400,5,"è una mitragliatrice di fabbricazione russa prodotta da Izhmash in produzione dal 1996","Mitra","Arma",null,"9x18 mm"),
+("UMP-45",1200,5,"una potente mitragliatrice","Mitra","Arma",null,"9x18 mm"),
+
+#Fucile d'assalto
+("AK-47",2700,5,"è un fucile d'assalto sviluppato nell'Unione Sovietica da Mikhail Kalashnikov","Fucile d'assalto","Arma",null,"7,62x39 mm"),
+("AUG",3300,5,"è un fucile d'assalto bullpup austriaco prodotto da Steyr Mannlicher","Fucile d'assalto","Arma",null,"7 mm"),
+("SG553",3000,5,"è un fucile d'assalto fabbricato in Svizzera prodotto da Swiss Arms","Fucile d'assalto","Arma",null,"7 mm"),
+("FAMAS",2050,5,"è un fucile d'assalto bullpup progettato e prodotto in Francia da MAS ","Fucile d'assalto","Arma",null,"7 mm"),
+("GALIL AR",1800,5,"un fucile d'assalto israeliano prodotto da Israel Weapon Industries","Fucile d'assalto","Arma",null,"5,7x28 mm"),
+("M4A1-S",3100,5,"è dotato di un silenziatore , che viene fissato quando si riceve l'arma, e può essere staccato (e riattaccato) manualmente ","Fucile d'assalto","Arma",null,"8 mm"),
+("SSG 08",1700,5,"è un fucile da cecchino di fabbricazione austriaca a bullone","Fucile d'assalto","Arma",null,"7,62x51 mm"),
+("G3SG1",5000,5,"è una variante accurata del fucile da battaglia G3 sviluppato da Heckler & Koch","Fucile d'assalto","Arma",null,"7.62 mm"),
+("SCAR-20",5000,5,"è un fucile da cecchino automatico di fabbricazione belga","Fucile d'assalto","Arma",null,"7.62 mm"),
+("AWP",4750,5,"Il dio dei fucili da cecchino","Fucile d'assalto","Arma",null,".338 Lapua Magnum");
+
+
+insert into Utente (nickname,admind,nome,cognome,passwordn,email,giorno,mese,anno) VALUES
+("Admin",true,"Giuseppe","Nisivoccia","Apizz123","g.nisivoccia@studenti.unisa.it",22,9,1999)
