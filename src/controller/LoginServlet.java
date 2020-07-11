@@ -20,15 +20,18 @@ public class LoginServlet extends HttpServlet {
             ArrayList<Utente> utenti = (ArrayList<Utente>) utenteDAO.doRetrieveAll();
             String username=request.getParameter("userlogin");
             String password=request.getParameter("passlogin");
+            boolean z=true;
             for(int i=0;i<utenti.size();i++) {
                 if (utenti.get(i).getNickname().equals(username) && utenti.get(i).getPasswordn().equals(password)) {
                     HttpSession session = request.getSession(true);
                     session.setAttribute("utente", utenti.get(i));
                     RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
                     dispatcher.forward(request, response);
+                    z=false;
                 }
             }
-            throw new ServletException("Login Non corretto");
+            if(z==true)
+            throw new MyServletException("Login Non corretto");
 
     }
 

@@ -127,5 +127,30 @@ public class MerceDAO {
         }
     }
 
+
+    public void doSave(Merce m){
+        try (Connection con = ConPool.getConnection()) {
+            PreparedStatement ps = con.prepareStatement(
+                    "INSERT INTO merce (nome,prezzo,quantità,descrizione,categoria,tipomerce,tipoequipaggiamento,tipomunizioni) VALUES(?,?,?,?,?,?,?,?)");
+
+            ps.setString(1, m.getNome());
+            ps.setDouble(2, m.getPrezzo());
+            ps.setInt(3,m.getQuantita());
+            ps.setString(4,m.getDescrizione());
+            ps.setString(5,m.getCategoria());
+            ps.setString(6,m.getTipomerce());
+            ps.setString(7,null);
+            ps.setString(8,m.getTipomunizioni());
+
+            if (ps.executeUpdate() != 1) {
+                throw new RuntimeException("INSERT error.");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
     }
 

@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="model.Utente" %>
+
 
 <!-- UGUALE AD OGNI PAGINA -->
 <jsp:include page="header.jsp">
@@ -24,7 +24,8 @@
 
 <c:if test="${utente.admind == true}">
     <a href="users">EDIT UTENTI</a><br>
-    <a href="editp">EDIT MERCE</a>
+    <a href="editp">EDIT MERCE</a><br>
+    <a href="AddProdotto.jsp">ADD MERCE</a>
 </c:if>
 
 

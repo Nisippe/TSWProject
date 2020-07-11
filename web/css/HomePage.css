@@ -177,6 +177,15 @@ input[type=text], select {
     box-sizing: border-box;
 }
 
+input[type=number], select {
+    width: 100%;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
 input[type=submit] {
     background-color: #4CAF50;
     color: white;
