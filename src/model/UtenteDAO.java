@@ -81,11 +81,32 @@ public class UtenteDAO {
     public void doRemove(String nickname){
         try (Connection con = ConPool.getConnection()) {
             Statement ps = con.createStatement();
-            ps.executeUpdate("DELETE from utente where nickname='" + nickname + "'");
+            if(ps.executeUpdate("DELETE from utente where nickname='" + nickname + "'") != 1){
+                throw new RuntimeException("DELETE error.");
+            }
         }catch (SQLException e){
             throw new RuntimeException(e);
         }
     }
+
+    public void doUpdate(String nickname,String nome,String cognome,String email,String password){
+        try (Connection con = ConPool.getConnection()){
+            PreparedStatement ps=con.prepareStatement("UPDATE Utente SET nome=?,cognome=?,email=?,passwordn=? where nickname=?");
+            ps.setString(1,nome);
+            ps.setString(2,cognome);
+            ps.setString(3,email);
+            ps.setString(4,password);
+            ps.setString(5,nickname);
+
+            if(ps.executeUpdate() != 1){
+                throw new RuntimeException("UPDATE error");
+            }
+
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+    }
+
 
     }
 

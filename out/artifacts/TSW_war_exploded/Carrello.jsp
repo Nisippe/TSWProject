@@ -10,7 +10,7 @@
 <h1>Carrello</h1>
 <c:forEach items="${carrello.prodotti}" var="pq">
     <h1><c:out value="${pq.merce.nome}"/></h1>
-    <a href="#"><img src="./images/Armi/${pq.merce.nome}.jpg"></a>
+    <a href="Prodotto?nome=${pq.merce.nome}"><img src="./images/Armi/${pq.merce.nome}.jpg"></a>
     <h3><a href="Prodotto?nome=${pq.merce.nome}">${pq.merce.nome}</a></h3>
     <h5>Quantità: ${pq.quantita} , PREZZO TOTALE: ${pq.prezzoTotEuro} $</h5>
     <form action="Carrello" method="post">

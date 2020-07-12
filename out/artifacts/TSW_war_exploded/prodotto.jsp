@@ -19,7 +19,6 @@
 <form action="Carrello">
     <c:choose>
     <c:when test="${prodotto.quantita ne 0}">
-
         <input type="hidden" name="nome" value="${prodotto.nome}">
     <input type="submit" class="button1" value="Aggiungi al carrello">
     </c:when>

@@ -1,7 +1,6 @@
 package model;
 
-import java.util.Collection;
-import java.util.LinkedHashMap;
+import java.util.*;
 
 public class Carrello {
     public static class ProdottoQuantita{
@@ -11,7 +10,13 @@ public class Carrello {
         private ProdottoQuantita(Merce merce,int quantita){
             this.merce=merce;
             this.quantita=quantita;
+
+
+
+
         }
+
+
 
         public Merce getMerce() {
             return merce;
@@ -44,6 +49,8 @@ public class Carrello {
     public ProdottoQuantita get(String nome){
         return prodotti.get(nome);
     }
+
+    public Set<String> getAll() {return ((Set<String>) prodotti.keySet());}
 
     public void put(Merce merce){
         prodotti.put(merce.getNome(),new ProdottoQuantita(merce,1));

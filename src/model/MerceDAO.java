@@ -1,5 +1,8 @@
 package model;
 
+import controller.MyServletException;
+
+import javax.servlet.RequestDispatcher;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -147,6 +150,35 @@ public class MerceDAO {
             }
 
         } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void doBuy(String nome){
+        try (Connection con = ConPool.getConnection()){
+                Merce merce=doRetrieveByNome(nome);
+                if(merce.getQuantita()==0)
+                        throw new MyServletException(merce.getNome()+ " Non disponibile , eliminarlo dal carrello");
+                else
+                    doUpdateQuantity(merce);
+
+
+        }catch (SQLException | MyServletException e){
+            throw new RuntimeException("BUY error");
+        }
+    }
+
+    public void doUpdateQuantity(Merce m){
+        try (Connection con = ConPool.getConnection()){
+            PreparedStatement ps=con.prepareStatement("UPDATE Merce SET quantità=? where nome=?");
+            ps.setInt(1,m.getQuantita()-1);
+            ps.setString(2,m.getNome());
+
+            if(ps.executeUpdate() != 1){
+                throw new RuntimeException("UPDATE error");
+            }
+
+        }catch (SQLException e){
             throw new RuntimeException(e);
         }
     }

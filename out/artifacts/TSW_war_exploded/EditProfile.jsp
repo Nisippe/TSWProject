@@ -9,8 +9,9 @@
 
 
 
-<form name="aggiorna" action="" method="post">
-    <h1>Aggiorna dati</h1>
+<form name="aggiorna" action="edit" method="post">
+    <h1>Aggiorna dati (RICOMPILARE ANCHE QUELLI DA NON CAMBIARE)</h1>
+    <input type="hidden" name="nickname" value="<c:out value="${utente.nickname}"/>"/>
     Nome<input type="text" name="nome" placeholder="<c:out value="${utente.nome}"/>" oninput="validaNome()"/><br>
     Cognome<input type="text" name="cognome" placeholder="<c:out value="${utente.cognome}"/>" oninput="validaCognome()"/><br>
     email<input type="text" name="email" placeholder="<c:out value="${utente.email}"/>" oninput="validaEmail()"/><br>
