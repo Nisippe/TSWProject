@@ -12,10 +12,10 @@
     <div class="right">
         <c:choose>
        <c:when test="${utente == null}">
-           <p> <a href="login-register.jsp">Login</a> | <a href="login-register.jsp">Register</a></p>
+           <p> <a href="toLogin">Login</a> | <a href="toLogin">Register</a></p>
        </c:when>
        <c:otherwise>
-            <a href="EditProfile.jsp"><c:out value="${utente.nickname}" /></a>
+            <a href="toed"><c:out value="${utente.nickname}" /></a>
         </c:otherwise>
     </c:choose>
     </div>
@@ -25,7 +25,7 @@
 <div class="container">
     <img src="images/background.png" style="width: 100%; height:10%"/>
     <div class="left">
-        <a href="index.jsp"><img src="images/logo.png" class="logo" alt="logo"/></a>
+        <a href="home"><img src="images/logo.png" class="logo" alt="logo"/></a>
     </div>
 
 
@@ -49,7 +49,7 @@
     <div class="carrello">
         <c:choose>
         <c:when test="${utente == null}">
-        <a href="login-register.jsp"><img src="images/cart.png" alt="carrello" class="cart"/></a>
+        <a href="login"><img src="images/cart.png" alt="carrello" class="cart"/></a>
         </c:when>
         <c:otherwise>
         <a href="Carrello"><img src="images/cart.png" alt="carrello" class="cart"/></a>

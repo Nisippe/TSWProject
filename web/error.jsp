@@ -6,7 +6,7 @@
     <jsp:param name="pageTitle" value="Home"/>
 </jsp:include>
 <!-- FIN QUI-->
-
+mammt
 <h1>Errore ${requestScope['javax.servlet.error.status_code']}</h1>
 <h1>${requestScope['javax.servlet.error.exception']}</h1>
 

@@ -14,7 +14,7 @@
 <div class="container">
     <img src="images/background.png" style="width: 100%; height:10%"/>
     <div class="left">
-        <a href="index.jsp"><img src="images/logo.png" alt="logo"/></a>
+        <a href="WEB-INF/JSP/index.jsp"><img src="images/logo.png" alt="logo"/></a>
     </div>
     <div class="right">
         <!-- LOGIN -->
@@ -66,7 +66,7 @@
 </c:when>
 <c:otherwise>
         <h1>SEI GIA LOGGATO!</h1>
-<a href="index.jsp"> torna indietro </a>
+<a href="WEB-INF/JSP/index.jsp"> torna indietro </a>
 </c:otherwise>
 </c:choose>
 

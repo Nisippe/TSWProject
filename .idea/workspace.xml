@@ -7,31 +7,73 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39b4bfae-2576-4c53-b808-a75d0e7e70ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/End.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/BuyServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/EditServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/TSW/controller/BuyServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/TSW/controller/EditServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/BuyServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/EditServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/End.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/JSP/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/Carrello.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/Carrello.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/EditProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/EditProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/model/Carrello$ProdottoQuantita.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/model/Carrello$ProdottoQuantita.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/model/Carrello.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/model/Carrello.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/model/MerceDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/model/MerceDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/model/UtenteDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/model/UtenteDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/prodotto.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/prodotto.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TSW/model/Carrello$ProdottoQuantita.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSW/model/Carrello$ProdottoQuantita.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TSW/model/Carrello.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSW/model/Carrello.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TSW/model/MerceDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSW/model/MerceDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TSW/model/UtenteDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSW/model/UtenteDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Carrello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Carrello.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/MerceDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MerceDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/UtenteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/UtenteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Carrello.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Carrello.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/EditProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/EditProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/AddProdotto.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/Carrello.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/EditProfile.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/End.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/NewsUpdates.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/Ricerca.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/Shopping.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/AdminMerceServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/AdminMerceServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/AdminUsersServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/AdminUsersServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/AggiungiMerceServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/AggiungiMerceServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/BuyServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/BuyServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/CategoryServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/CategoryServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/EditServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/EditServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/HomeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/HomeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/KartServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/KartServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/LogoutServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/RegisterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/RegisterServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/RemoveMerceServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/RemoveMerceServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/RemoveServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/RemoveServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/RicercaServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/classes/controller/RicercaServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/adminprodotti.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/adminutenti.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/error.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/footer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/login-register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TSW_war_exploded/prodotto.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TSW/controller/AdminMerceServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSW/controller/AdminMerceServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TSW/controller/AdminUsersServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSW/controller/AdminUsersServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TSW/controller/AggiungiMerceServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSW/controller/AggiungiMerceServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TSW/controller/BuyServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSW/controller/BuyServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TSW/controller/CategoryServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSW/controller/CategoryServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TSW/controller/EditServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSW/controller/EditServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TSW/controller/HomeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSW/controller/HomeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TSW/controller/KartServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSW/controller/KartServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TSW/controller/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSW/controller/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TSW/controller/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSW/controller/LogoutServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TSW/controller/RegisterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSW/controller/RegisterServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TSW/controller/RemoveMerceServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSW/controller/RemoveMerceServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TSW/controller/RemoveServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSW/controller/RemoveServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TSW/controller/RicercaServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TSW/controller/RicercaServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/AdminMerceServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AdminMerceServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/AdminUsersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AdminUsersServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/AggiungiMerceServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AggiungiMerceServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/BuyServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/BuyServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/CategoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CategoryServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/EditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/EditServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/HomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/KartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/KartServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/LogoutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/RegisterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/RemoveMerceServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/RemoveMerceServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/RemoveServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/RemoveServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/RicercaServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/RicercaServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Ricerca.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Ricerca.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Shopping.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Shopping.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/prodotto.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/prodotto.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,6 +141,7 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\gnisi\Desktop\Progetto\TSW\web" />
       <recent name="C:\Users\gnisi\Desktop\Progetto\TSW\web\WEB-INF\JSP" />
+      <recent name="C:\Users\gnisi\Desktop\Progetto\TSW\web\WEB-INF" />
       <recent name="C:\Users\gnisi\Desktop\Progetto\TSW\web\WEB-INF\jsp" />
     </key>
   </component>
@@ -266,6 +309,7 @@
       <workItem from="1594486341365" duration="3843000" />
       <workItem from="1594494275758" duration="704000" />
       <workItem from="1594573924756" duration="7197000" />
+      <workItem from="1594639420734" duration="4723000" />
     </task>
     <task id="LOCAL-00001" summary="Aggiornamento 1.1">
       <created>1587471305838</created>
@@ -305,6 +349,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Notifications/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587471276097" />
+    <state x="552" y="178" key="#Project_Structure" timestamp="1594652106787">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1594652106787" />
     <state x="552" y="178" key="#Template_Data_Languages" timestamp="1588275839077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -331,66 +379,78 @@
     </state>
     <state x="-1825" y="316" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588794737526" />
     <state x="95" y="316" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1594335234928" />
-    <state width="1293" height="211" key="GridCell.Tab.0.bottom" timestamp="1594581526848">
+    <state width="1293" height="211" key="GridCell.Tab.0.bottom" timestamp="1594656770307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="148" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588796547893" />
     <state width="1293" height="211" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1594581526848" />
-    <state width="1293" height="211" key="GridCell.Tab.0.center" timestamp="1594581526848">
+    <state width="1293" height="211" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594656770307" />
+    <state width="1293" height="211" key="GridCell.Tab.0.center" timestamp="1594656770307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="148" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588796547893" />
     <state width="1293" height="211" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1594581526848" />
-    <state width="1293" height="211" key="GridCell.Tab.0.left" timestamp="1594581526848">
+    <state width="1293" height="211" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594656770307" />
+    <state width="1293" height="211" key="GridCell.Tab.0.left" timestamp="1594656770306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="148" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588796547893" />
     <state width="1293" height="211" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1594581526848" />
-    <state width="1293" height="211" key="GridCell.Tab.0.right" timestamp="1594581526848">
+    <state width="1293" height="211" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594656770306" />
+    <state width="1293" height="211" key="GridCell.Tab.0.right" timestamp="1594656770307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="148" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588796547893" />
     <state width="1293" height="211" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1594581526848" />
-    <state width="1293" height="211" key="GridCell.Tab.1.bottom" timestamp="1594581526849">
+    <state width="1293" height="211" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594656770307" />
+    <state width="1293" height="211" key="GridCell.Tab.1.bottom" timestamp="1594656770307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="148" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588796547790" />
     <state width="1293" height="211" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1594581526849" />
-    <state width="1293" height="211" key="GridCell.Tab.1.center" timestamp="1594581526848">
+    <state width="1293" height="211" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594656770307" />
+    <state width="1293" height="211" key="GridCell.Tab.1.center" timestamp="1594656770307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="148" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588796547790" />
     <state width="1293" height="211" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1594581526848" />
-    <state width="1293" height="211" key="GridCell.Tab.1.left" timestamp="1594581526848">
+    <state width="1293" height="211" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594656770307" />
+    <state width="1293" height="211" key="GridCell.Tab.1.left" timestamp="1594656770307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="148" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588796547790" />
     <state width="1293" height="211" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1594581526848" />
-    <state width="1293" height="211" key="GridCell.Tab.1.right" timestamp="1594581526848">
+    <state width="1293" height="211" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594656770307" />
+    <state width="1293" height="211" key="GridCell.Tab.1.right" timestamp="1594656770307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="148" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588796547790" />
     <state width="1293" height="211" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1594581526848" />
-    <state width="1293" height="211" key="GridCell.Tab.2.bottom" timestamp="1594581526849">
+    <state width="1293" height="211" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594656770307" />
+    <state width="1293" height="211" key="GridCell.Tab.2.bottom" timestamp="1594656770308">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="148" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588796547791" />
     <state width="1293" height="211" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1594581526849" />
-    <state width="1293" height="211" key="GridCell.Tab.2.center" timestamp="1594581526849">
+    <state width="1293" height="211" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594656770308" />
+    <state width="1293" height="211" key="GridCell.Tab.2.center" timestamp="1594656770307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="148" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588796547790" />
     <state width="1293" height="211" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1594581526849" />
-    <state width="1293" height="211" key="GridCell.Tab.2.left" timestamp="1594581526849">
+    <state width="1293" height="211" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594656770307" />
+    <state width="1293" height="211" key="GridCell.Tab.2.left" timestamp="1594656770307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="148" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588796547790" />
     <state width="1293" height="211" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1594581526849" />
-    <state width="1293" height="211" key="GridCell.Tab.2.right" timestamp="1594581526849">
+    <state width="1293" height="211" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594656770307" />
+    <state width="1293" height="211" key="GridCell.Tab.2.right" timestamp="1594656770307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="148" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588796547790" />
     <state width="1293" height="211" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1594581526849" />
+    <state width="1293" height="211" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594656770307" />
     <state width="1293" height="211" key="GridCell.Tab.3.bottom" timestamp="1592326123371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -445,6 +505,6 @@
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1592055579197" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TSW$Tomcat_9_0_30.ic" NAME="Tomcat 9.0.30 Coverage Results" MODIFIED="1594581422105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/TSW$Tomcat_9_0_30.ic" NAME="Tomcat 9.0.30 Coverage Results" MODIFIED="1594656624815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
